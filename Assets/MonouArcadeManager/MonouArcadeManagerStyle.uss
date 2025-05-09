@@ -1,0 +1,261 @@
+#content {
+    background-color: rgb(0, 0, 0);
+    background-image: url("project://database/Assets/MonouArcadeManager/BG.png?fileID=2800000&guid=01b9673d3c8e4496c8bb97a754dc1d2b&type=3#BG");
+    font-size: 18px;
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgb(173, 173, 173);
+    flex-grow: 1;
+}
+
+#unity-content-container {
+    flex-grow: 1;
+}
+
+#logo {
+    margin-top: 12px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    background-image: url('project://database/Assets/Sprites/assets%20tetris.png?fileID=-246002292&guid=8c45e381fac0d344288e55847067dfa9&type=3#assets tetris_1');
+    -unity-background-scale-mode: scale-to-fit;
+    padding-top: 60%;
+}
+
+.container {
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.unity-label {
+    -unity-text-align: upper-center;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    white-space: normal;
+    -unity-font-definition: url("project://database/Assets/Fonts/fonnts.com-New_Nord_Wide_Heavy.otf?fileID=12800000&guid=b99a6d68e0abb3a43a95e78d530c07c8&type=3#fonnts.com-New_Nord_Wide_Heavy");
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-bottom: 20px;
+    padding-left: 0;
+}
+
+.unity-button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-left-color: rgb(137, 137, 137);
+    border-right-color: rgb(137, 137, 137);
+    border-top-color: rgb(137, 137, 137);
+    border-bottom-color: rgb(137, 137, 137);
+    background-color: rgba(34, 128, 197, 0);
+    -unity-font-style: normal;
+    background-image: url("project://database/Assets/Sprites/AssetsJungleMission.png?fileID=-1808107437953314924&guid=b4a1c8e0f69d54c498d5fdac224af5c6&type=3#AssetsJungleMission_2");
+    -unity-background-scale-mode: scale-to-fit;
+    color: rgb(255, 255, 255);
+    -unity-font-definition: url("project://database/Assets/Fonts/fonnts.com-New_Nord_Wide_Heavy.otf?fileID=12800000&guid=b99a6d68e0abb3a43a95e78d530c07c8&type=3#fonnts.com-New_Nord_Wide_Heavy");
+    -unity-text-align: middle-center;
+    background-size: 100% 100%;
+    font-size: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.unity-button:focus {
+}
+
+#tutorial {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.reward {
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    margin-top: 12px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    background-color: rgb(227, 0, 71);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    align-items: flex-start;
+}
+
+.reward_description {
+    color: rgb(111, 231, 193);
+    -unity-font-style: bold;
+    font-size: 24px;
+    width: 100%;
+    -unity-text-align: upper-left;
+    white-space: normal;
+    padding-right: 100px;
+}
+
+Scroller #unity-low-button {
+    display: none;
+}
+
+Scroller #unity-high-button {
+    display: none;
+}
+
+Scroller #unity-slider {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+Scroller #unity-drag-container {
+}
+
+Scroller #unity-dragger {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+Scroller #unity-tracker {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+Scroller {
+    width: 16px;
+}
+
+#hr {
+    padding-top: 24px;
+}
+
+.ranking {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-self: stretch;
+    flex-shrink: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.column {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    align-items: flex-start;
+}
+
+.column Label {
+    align-self: stretch;
+    -unity-text-align: upper-center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    white-space: nowrap;
+}
+
+.columnhead {
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+}
+
+.pos {
+    background-position-x: left 30px;
+    -unity-text-align: upper-right;
+    margin-left: 0;
+    -unity-font-definition: url("project://database/Assets/Fonts/fonnts.com-New_Nord_Wide_Heavy.otf?fileID=12800000&guid=b99a6d68e0abb3a43a95e78d530c07c8&type=3#fonnts.com-New_Nord_Wide_Heavy");
+    border-left-width: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.name {
+    -unity-font-definition: url("project://database/Assets/Fonts/fonnts.com-New_Nord_Wide_Heavy.otf?fileID=12800000&guid=b99a6d68e0abb3a43a95e78d530c07c8&type=3#fonnts.com-New_Nord_Wide_Heavy");
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    -unity-text-align: upper-left;
+    padding-right: 0;
+    border-right-width: 0;
+}
+
+.points {
+    background-position-x: right 30px;
+    -unity-font-definition: url("project://database/Assets/Fonts/fonnts.com-New_Nord_Wide_Heavy.otf?fileID=12800000&guid=b99a6d68e0abb3a43a95e78d530c07c8&type=3#fonnts.com-New_Nord_Wide_Heavy");
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-right-width: 40px;
+    border-left-width: 0;
+    margin-right: 0;
+    padding-right: 0;
+    font-size: 15px;
+}
+
+.row {
+    background-image: url("project://database/Assets/Sprites/AssetsJungleMission.png?fileID=7411209919622785181&guid=b4a1c8e0f69d54c498d5fdac224af5c6&type=3#AssetsJungleMission_8");
+    background-size: 200% 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -unity-text-align: upper-center;
+}
+
+.row0 {
+    background-image: url("project://database/Assets/Sprites/AssetsJungleMission.png?fileID=4149220060453684154&guid=b4a1c8e0f69d54c498d5fdac224af5c6&type=3#AssetsJungleMission_10");
+    background-size: 200% 100%;
+    margin-top: 10px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+.row1 {
+    background-size: 200% 100%;
+    background-image: url("project://database/Assets/Sprites/AssetsJungleMission.png?fileID=-470989066068876683&guid=b4a1c8e0f69d54c498d5fdac224af5c6&type=3#AssetsJungleMission_11");
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.row2 {
+    background-size: 200% 100%;
+    background-image: url("project://database/Assets/Sprites/AssetsJungleMission.png?fileID=-2972813531958190798&guid=b4a1c8e0f69d54c498d5fdac224af5c6&type=3#AssetsJungleMission_20");
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    margin-left: 0;
+}

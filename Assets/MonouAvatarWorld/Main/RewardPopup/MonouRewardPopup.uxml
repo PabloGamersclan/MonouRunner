@@ -1,0 +1,57 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Main/RewardPopup/MonouRewardPopup.uss?fileID=7433441132597879392&amp;guid=bf87aec4823c5834099cd32e988c3013&amp;type=3#MonouRewardPopup" />
+    <ui:VisualElement name="MainContainer" class="landscape" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.78); justify-content: center; align-items: center;">
+        <ui:VisualElement name="Particles" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; width: 100%; height: 100%;">
+            <ui:VisualElement class="white" />
+            <ui:VisualElement class="donut" />
+            <ui:VisualElement class="red" />
+            <ui:VisualElement class="purple" />
+            <ui:VisualElement class="cross" />
+            <ui:VisualElement class="white" />
+            <ui:VisualElement class="donut" />
+            <ui:VisualElement class="red" />
+            <ui:VisualElement class="purple" />
+            <ui:VisualElement class="cross" />
+            <ui:VisualElement class="white" />
+            <ui:VisualElement class="donut" />
+            <ui:VisualElement class="red" />
+            <ui:VisualElement class="purple" />
+            <ui:VisualElement class="cross" />
+            <ui:VisualElement class="white" />
+            <ui:VisualElement class="donut" />
+            <ui:VisualElement class="red" />
+            <ui:VisualElement class="purple" />
+            <ui:VisualElement class="cross" />
+            <ui:VisualElement class="white" />
+            <ui:VisualElement class="donut" />
+            <ui:VisualElement class="red" />
+            <ui:VisualElement class="purple" />
+            <ui:VisualElement class="cross" />
+            <ui:VisualElement class="white" />
+            <ui:VisualElement class="donut" />
+            <ui:VisualElement class="red" />
+            <ui:VisualElement class="purple" />
+            <ui:VisualElement class="cross" />
+            <ui:VisualElement class="white" />
+            <ui:VisualElement class="donut" />
+            <ui:VisualElement class="red" />
+            <ui:VisualElement class="purple" />
+            <ui:VisualElement class="cross" />
+            <ui:VisualElement class="white" />
+            <ui:VisualElement class="donut" />
+            <ui:VisualElement class="red" />
+            <ui:VisualElement class="purple" />
+            <ui:VisualElement class="cross" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Content" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; background-image: url(&apos;project://database/Assets/Main/RewardPopup/glow_effect.png?fileID=2800000&amp;guid=a2bec7c6a0a9eee4caf57a0c17a6e262&amp;type=3#glow_effect&apos;); padding-top: 20%; padding-bottom: 20%;">
+            <ui:Label tabindex="-1" text="Texto del modal" display-tooltip-when-elided="true" style="left: 0; right: 0; top: 0; -unity-text-align: upper-center; color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgba(255, 255, 255, 0.5); -unity-font-style: bold; white-space: normal;" />
+            <ui:VisualElement name="List" style="background-color: rgb(0, 0, 0); align-self: center; padding-left: 8px; padding-right: 8px; padding-top: 8px; padding-bottom: 8px; border-top-left-radius: 40px; border-bottom-left-radius: 40px; border-top-right-radius: 40px; border-bottom-right-radius: 40px; flex-wrap: wrap; flex-direction: row; margin-bottom: 8px; margin-top: 8px; justify-content: center;">
+                <ui:VisualElement class="item" />
+                <ui:VisualElement class="item" />
+                <ui:VisualElement class="item" />
+                <ui:VisualElement class="item" />
+            </ui:VisualElement>
+            <ui:Button text="Continuar" display-tooltip-when-elided="true" style="align-self: center; background-color: rgb(249, 31, 68); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 16px; border-bottom-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px; color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 12px; padding-left: 24px; padding-right: 24px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

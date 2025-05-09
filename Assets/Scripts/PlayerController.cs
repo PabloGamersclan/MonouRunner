@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private bool isCrouching = false;
     private bool isStopped = false; // Indica si el jugador está detenido
     private bool isStunned = false; // Indica si el jugador está atontado
+    private bool isRight = false; // Indica si el jugador está en la dirección correcta
+    private bool isLeft = false; // Indica si el jugador está en la dirección izquierda
     private Vector3 targetPosition;
     private float originalY; // Guardar la posición original en Y
     private Quaternion originalRotation; // Guardar la rotación original del jugador
@@ -46,31 +48,38 @@ public class PlayerController : MonoBehaviour
 
     public IEnumerator HandleObstacleCollision()
     {
-        // Detener el movimiento del jugador y atontarlo
-        isStopped = true;
-        isStunned = true;
-        animator.SetBool("isStun", true);
+    // Detener el movimiento del jugador y atontarlo
+    isStopped = true;
+    isStunned = true;
+    animator.SetBool("isStun", true);
 
-        // Empujar ligeramente hacia atrás
-        Vector3 pushBack = -Vector3.forward * 2f; // Ajusta la fuerza del empuje
-        transform.position += pushBack;
+    // Posición inicial y objetivo para el movimiento hacia atrás
+    Vector3 startPosition = transform.position;
+    Vector3 targetPosition = startPosition + (-Vector3.forward * 2f); // Ajusta la fuerza del empuje
 
-        // Rotar al jugador -90° en el eje X
-       // transform.Rotate(-90f, 0f, 0f);
+    float elapsedTime = 0f;
+    float duration = 0.5f; // Duración del movimiento hacia atrás
 
-        // Esperar el tiempo de atontamiento
-        yield return new WaitForSeconds(stunnedDuration);
+    // Movimiento suave hacia atrás
+    while (elapsedTime < duration)
+    {
+        elapsedTime += Time.deltaTime;
+        transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / duration);
+        yield return null;
+    }
 
-        // Restaurar la rotación y posición original
-       // transform.rotation = originalRotation;
-        transform.position = new Vector3(transform.position.x, originalY, transform.position.z);
+    // Esperar el tiempo de atontamiento
+    yield return new WaitForSeconds(stunnedDuration);
 
-        // Reanudar el movimiento
-        isStopped = false;
+    // Restaurar la posición original en Y
+    transform.position = new Vector3(transform.position.x, originalY, transform.position.z);
 
-        // Finalizar el estado de atontamiento
-        isStunned = false;
-        animator.SetBool("isStun", false);
+    // Reanudar el movimiento
+    isStopped = false;
+
+    // Finalizar el estado de atontamiento
+    isStunned = false;
+    animator.SetBool("isStun", false);
     }
 
     private void Update()
@@ -130,11 +139,18 @@ public class PlayerController : MonoBehaviour
                         {
                             currentLane++;
                             swipeDetected = true;
+                            animator.SetBool("IsRight", true);
+                            print("Swipe right detected"); // Mensaje de depuración
+                            StartCoroutine(ResetIsRight());
+
                         }
                         else if (swipeDelta.x < -50 && currentLane > 0) // Deslizar a la izquierda
                         {
                             currentLane--;
                             swipeDetected = true;
+                            animator.SetBool("IsLeft", true);
+                            isLeft = true; // Indicar que el jugador está en la dirección izquierda
+                            StartCoroutine(ResetIsLeft());
                         }
                     }
                     else
@@ -143,7 +159,6 @@ public class PlayerController : MonoBehaviour
                         if (swipeDelta.y > 50 && !isJumping && !isCrouching) // Deslizar hacia arriba (saltar)
                         {
                             print("Jump detected"); // Mensaje de depuración
-
                             StartCoroutine(Jump());
                             swipeDetected = true;
                         }
@@ -157,6 +172,16 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    private IEnumerator ResetIsLeft()
+{
+    yield return new WaitForSeconds(0.5f); // Esperar 0.5 segundos
+    animator.SetBool("IsLeft", false); // Restablecer el valor a falso
+}
+    private IEnumerator ResetIsRight()
+{
+    yield return new WaitForSeconds(0.5f); // Esperar 0.5 segundos
+    animator.SetBool("IsRight", false); // Restablecer el valor a falso
+}
 
     private IEnumerator Jump()
     {

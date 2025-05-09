@@ -1,0 +1,113 @@
+.landscape #Content {
+    position: absolute;
+    width: 60%;
+}
+
+.item {
+    width: 64px;
+    background-color: rgb(255, 255, 255);
+    height: 64px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    margin-left: 4px;
+    margin-right: 4px;
+    align-self: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.white {
+    width: 32px;
+    height: 32px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    translate: -50% -50%;
+}
+
+.donut {
+    position: absolute;
+    left: 50px;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    translate: -50% -50%;
+}
+
+.red {
+    width: 32px;
+    height: 32px;
+    background-color: rgb(249, 31, 68);
+    position: absolute;
+    left: 100px;
+    top: 0;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    translate: -50% -50%;
+}
+
+.purple {
+    width: 32px;
+    height: 32px;
+    background-color: rgb(112, 78, 252);
+    position: absolute;
+    left: 150px;
+    top: 0;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    translate: -50% -50%;
+}
+
+.cross {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    background-image: url('project://database/Assets/Main/RewardPopup/cross.png?fileID=2800000&guid=4226cd7b6d4c4c04a869e814c3cae0c2&type=3#cross');
+    translate: -50% -50%;
+}
+
+.portrate #Content {
+    position: absolute;
+    width: 100%;
+}

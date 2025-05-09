@@ -11,7 +11,7 @@ public class Camera : MonoBehaviour
         if (player != null)
         {
             transform.position = new Vector3(
-                transform.position.x, // Mantener la posición fija en X
+                player.position.x, // Mantener la posición fija en X
                 player.position.y + offset.y, // Seguir al jugador en Y
                 player.position.z + offset.z // Seguir al jugador en Z
             );

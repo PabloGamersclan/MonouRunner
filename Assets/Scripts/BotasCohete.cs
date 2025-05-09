@@ -8,7 +8,7 @@ public class BotasCohete : PoweUps
 
     private void Start()
     {
-        StartCoroutine(DeactivateAfterDuration());
+      //  StartCoroutine(DeactivateAfterDuration());
     }
 
     private IEnumerator DeactivateAfterDuration()
