@@ -7,10 +7,20 @@ public class Fuel : PoweUps
 
     private void Start()
     {
-        StartCoroutine(DeactivateAfterDuration());
+        //StartCoroutine(DeactivateAfterDuration());
     }
 
-    private IEnumerator DeactivateAfterDuration()
+       private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Power-up activado"); // Mensaje de depuración
+            Activate(other.gameObject);
+            StartCoroutine(DeactivateAfterDuration(other.gameObject));
+            gameObject.transform.position = new Vector3(0, -10, 0); // Desplazar el objeto a una posición fuera de la vista 
+        }
+    }
+    private IEnumerator DeactivateAfterDuration(GameObject player)
     {
         yield return new WaitForSeconds(duration);
         Deactivate(null);

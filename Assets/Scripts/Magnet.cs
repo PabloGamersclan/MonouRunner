@@ -4,17 +4,26 @@ using System.Collections;
 public class Magnet : PoweUps
 {
     public float radius = 5f;
-    public float duration = 10f;
+    public float _duration = 10f;
 
     private void Start()
     {
-        StartCoroutine(DeactivateAfterDuration());
+        //StartCoroutine(DeactivateAfterDuration());
     }
-
-    private IEnumerator DeactivateAfterDuration()
+        private void OnTriggerEnter(Collider other)
     {
-        yield return new WaitForSeconds(duration);
-        Deactivate(null);
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Power-up activado"); // Mensaje de depuración
+            Activate(other.gameObject);
+            StartCoroutine(DeactivateAfterDuration(other.gameObject));
+            gameObject.transform.position = new Vector3(0, -10, 0); // Desplazar el objeto a una posición fuera de la vista 
+        }
+    }
+    private IEnumerator DeactivateAfterDuration(GameObject player)
+    {
+        yield return new WaitForSeconds(_duration);
+        Deactivate(player);
     }
 
     public override void Activate(GameObject player)
