@@ -20,7 +20,13 @@ MonoBehaviour:
       name: Sequence
       isCustom: 0
       customSequence: {fileID: 0}
-      segments: []
+      segments:
+      - nested: 0
+        randomPickChance: 1
+        _prefab: {fileID: 4496781227717099130, guid: 434941f37e934614990a70b37a08f3c5, type: 3}
+        _segmentPool: []
+        _pool: 0
+        _poolParent: {fileID: 0}
       customPathGenerator: {fileID: 0}
       spawnCount: 1
       type: 0
@@ -35,7 +41,13 @@ MonoBehaviour:
       name: Sequence
       isCustom: 0
       customSequence: {fileID: 0}
-      segments: []
+      segments:
+      - nested: 0
+        randomPickChance: 1
+        _prefab: {fileID: 4496781227717099130, guid: 434941f37e934614990a70b37a08f3c5, type: 3}
+        _segmentPool: []
+        _pool: 0
+        _poolParent: {fileID: 0}
       customPathGenerator: {fileID: 0}
       spawnCount: 1
       type: 0

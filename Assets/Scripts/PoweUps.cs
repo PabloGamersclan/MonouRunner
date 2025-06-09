@@ -14,7 +14,7 @@ public abstract class PoweUps : MonoBehaviour // Cambiar la clase a abstract
         {
             Activate(other.gameObject);
             StartCoroutine(DeactivateAfterDuration(other.gameObject));
-            Destroy(gameObject); // Destruir el power-up tras recogerlo
+            //Destroy(gameObject); // Destruir el power-up tras recogerlo
         }
     }
 

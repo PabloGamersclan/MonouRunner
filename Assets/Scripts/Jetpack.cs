@@ -8,7 +8,7 @@ public class Jetpack : PoweUps
 
     private void Start()
     {
-        StartCoroutine(DeactivateAfterDuration());
+        //StartCoroutine(DeactivateAfterDuration());
     }
 
     private IEnumerator DeactivateAfterDuration()
@@ -19,7 +19,16 @@ public class Jetpack : PoweUps
 
     public override void Activate(GameObject player)
     {
-        player.transform.position += new Vector3(0, 5f, 0); // Elevar al jugador
+        player.transform.position += new Vector3(0, 10f, 0); // Elevar al jugador
+        Animator animator = player.GetComponent<Animator>();
+        if (animator != null)
+        {
+            animator.SetBool("IsJetPack", true); // Activar animación de jetpack
+        }
+        else
+        {
+            Debug.LogError("El jugador no tiene un componente Animator. Por favor, añade uno.");
+        }
         // Aquí puedes activar una barra de duración en la UI
     }
 
@@ -27,8 +36,16 @@ public class Jetpack : PoweUps
     {
         if (player != null)
         {
+            Animator animator = player.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.SetBool("IsJetPack", false); // Activar animación de jetpack
+            }
+            else
+            {
+                Debug.LogError("El jugador no tiene un componente Animator. Por favor, añade uno.");
+            }
             player.transform.position -= new Vector3(0, 10f, 0); // Restaurar posición en Y
-
             if (mainCamera != null)
             {
                 mainCamera.transform.position -= new Vector3(0, 10f, 0); // Restaurar posición de la cámara

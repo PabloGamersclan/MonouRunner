@@ -7,11 +7,11 @@ public class PlayerController : MonoBehaviour
     public float forwardSpeed = 5f; // Velocidad de avance automático
     public float laneDistance = 2f; // Distancia entre carriles
     public float jumpHeight = 2f; // Altura del salto
-    public float jumpDuration = 0.5f; // Duración del salto
-    public float crouchDuration = 0.5f; // Duración del agacharse
-    public float stunnedDuration = 0.5f; // Duración del estado atontado
+    public float jumpDuration = 0.6f; // Duración del salto
+    public float crouchDuration = 0.6f; // Duración del agacharse
+    public float stunnedDuration = 0.6f; // Duración del estado atontado
 
-    private int currentLane = 3; // 0 = izquierda, 1 = centro, 2 = derecha
+    private int currentLane = 2; // 0 = izquierda, 1 = centro, 2 = derecha
     private bool isJumping = false;
     private bool isCrouching = false;
     private bool isStopped = false; // Indica si el jugador está detenido
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         animator = GetComponentInChildren<Animator>(); // Obtener el componente Animator
-        targetPosition = new Vector3((currentLane - 3) * laneDistance, transform.position.y, transform.position.z); // Posición inicial en el carril central
+        targetPosition = new Vector3((currentLane - 2) * laneDistance, transform.position.y, transform.position.z); // Posición inicial en el carril central
         originalY = transform.position.y; // Guardar la posición inicial en Y
         originalRotation = transform.rotation; // Guardar la rotación inicial
 
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
         DetectSwipe();
 
         // Calcular posición objetivo en el carril
-        targetPosition = new Vector3((currentLane - 3) * laneDistance, transform.position.y, transform.position.z);
+        targetPosition = new Vector3((currentLane - 2) * laneDistance, transform.position.y, transform.position.z);
 
         // Movimiento hacia el carril objetivo
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 10f);
@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
                     if (Mathf.Abs(swipeDelta.x) > Mathf.Abs(swipeDelta.y))
                     {
                         // Detectar deslizamiento horizontal con 7 carriles
-                        if (swipeDelta.x > 50 && currentLane < 6) // Deslizar a la derecha
+                        if (swipeDelta.x > 50 && currentLane < 4) // Deslizar a la derecha
                         {
                             currentLane++;
                             swipeDetected = true;
@@ -174,12 +174,12 @@ public class PlayerController : MonoBehaviour
     }
     private IEnumerator ResetIsLeft()
 {
-    yield return new WaitForSeconds(0.3f); // Esperar 0.5 segundos
+    yield return new WaitForSeconds(0.2f); // Esperar 0.5 segundos
     animator.SetBool("IsLeft", false); // Restablecer el valor a falso
 }
     private IEnumerator ResetIsRight()
 {
-    yield return new WaitForSeconds(0.3f); // Esperar 0.5 segundos
+    yield return new WaitForSeconds(0.2f); // Esperar 0.5 segundos
     animator.SetBool("IsRight", false); // Restablecer el valor a falso
 }
 
